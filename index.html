@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <title>Air BnB Customer Form</title>
 </head>
 <body>
@@ -17,12 +18,36 @@
             <form id="contactForm">
                 <label for="owner_email">Owner email:</label>
                 <input type="email" id="email" name="email" required><br><br>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
         
                 <label for="guest_email">Guest email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email_guest" name="email_guest" required><br><br>
 
-                <label for="guest_number">Guest phone number:</label>
+                <label for="guest_cell">Guest phone number:</label>
+                <input type="text" id="guest_cell" name="guest_cell" required><br><br>
+
+                <label for="guest_number">Number of Guests:</label>
                 <input type="number" id="guest_num" name="guest_num" required><br><br>
+
+                <label for="guest_children">Number of Children:</label>
+                <input type="number" id="guest_children" name="guest_children" required><br><br>
+
+                <label for="guest_pet">Guest pets (if applicable):</label>
+                <input type="text" id="guest_pet" name="guest_pet"><br><br>
+
+                <label for="date_arrive">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required><br><br>
+
+                <label for="time_arrive">Check-in Time:</label>
+                <input type="time" id="checkin_time" name="checkin_time" required><br><br>
+
+                <label for="date_dip">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required><br><br>
+
+                <label for="time_dip">Check-out Time:</label>
+                <input type="time" id="checkout_time" name="checkout_time" required><br><br>
         
                 <label for="message">Special Instructions:</label>
                 <textarea id="message" name="message" required></textarea><br><br>
@@ -34,5 +59,7 @@
     <div class="footer"> 
         MegaMind - Email Form
     </div>
+
+    <script src="javascript.js"></script>
 </body>
 </html>
