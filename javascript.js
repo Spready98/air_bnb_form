@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Construct email content
         const emailContent = `
-            Owner Email: ${ownerEmail}
             Full Name: ${fullName}
             Guest Email: ${guestEmail}
             Guest Phone Number: ${guestCell}
@@ -38,9 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Send email using EmailJS
         emailjs.send("service_kg61mda", "template_d41tqjj", {
-            to_email: ownerEmail, // Replace with recipient's email
-            subject: "MegaMind Customer Report",
-            email_content: emailContent
+            to_email: ownerEmail, 
+            subject: "New Customer Report from MegaMind Airbnb",
+            email_content: emailContent,
+            Image: "https://i.imgur.com/uj6LtKI.jpg"
+
         })
         .then(function(response) {
             console.log("Email sent successfully!", response);
